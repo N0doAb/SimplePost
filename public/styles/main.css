@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: inherit;
+    list-style-type: none;
+}
+
+nav {
+    background-color: rgb(47, 48, 47);
+    height: 100px;
+}
+
+nav, nav ul {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 36px;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+footer {
+    margin-top: 100px;
+}
