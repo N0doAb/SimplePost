@@ -44,15 +44,16 @@ nav ul li {
 }
 
 footer {
-    background-color: #202120;
-    color: white;
+    position: absolute;
     left: 0;
     right: 0;
-    bottom: end;
-    display: flex;
+    background-color: #202120;
+    color: white;
+    display: grid;
+    align-self: flex-end;
     justify-content: center;
+    align-items: end;
     padding: 15px;
-    position: absolute;
 }
 
 /* posts */
