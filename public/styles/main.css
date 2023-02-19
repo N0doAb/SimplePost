@@ -9,14 +9,17 @@
 
 nav {
     background-color: rgb(47, 48, 47);
-    height: 100px;
+    height: 80px;
+    
 }
 
 nav, nav ul {
+    width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    gap: 20px;
     color: white;
-    font-size: 36px;
+    font-size: 30px;
     align-items: center;
 }
 
@@ -24,6 +27,26 @@ nav ul li {
     margin: 0 20px;
 }
 
+.logo {
+    margin:30px;
+    font-size: 43px;
+}
+
+.login-btn {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+}
+
 footer {
-    margin-top: 100px;
+    background-color: rgb(47, 48, 47);
+    color: white;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    position: absolute;
 }

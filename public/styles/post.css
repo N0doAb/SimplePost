@@ -1,0 +1,26 @@
+.content-container {
+    display: grid;
+    justify-content: center;
+    row-gap: 20px;
+}
+
+.post-name {
+    background-color: aqua;
+    border-color: brown;
+    border: 3px;
+    border-style: dashed;
+}
+
+.post-tag {
+    background-color: aqua;
+    border-color: brown;
+    border: 3px;
+    border-style: dashed;
+}
+
+.post-content {
+    background-color: aqua;
+    border-color: brown;
+    border: 3px;
+    border-style: dashed;
+}
