@@ -7,8 +7,12 @@
     list-style-type: none;
 }
 
+body {
+    background-color: #494B49;
+}
+
 nav {
-    background-color: rgb(47, 48, 47);
+    background-color: #202120;
     height: 80px;
     
 }
@@ -40,13 +44,51 @@ nav ul li {
 }
 
 footer {
-    background-color: rgb(47, 48, 47);
+    background-color: #202120;
     color: white;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: end;
     display: flex;
     justify-content: center;
     padding: 15px;
     position: absolute;
+}
+
+/* posts */
+
+.posts-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.single-post-container {
+    width: 500px;
+    height: 400px;
+    background-color: #383938;
+    border-radius: 15px;
+    margin: 30px 0;
+}
+
+.post-name {
+    font-size: 25px;
+    background-color: aqua;
+    border-color: brown;
+    border: 3px;
+    border-style: dashed;  
+}
+
+.post-tag {
+    background-color: aqua;
+    border-color: brown;
+    border: 3px;
+    border-style: dashed;
+}
+
+.post-content {
+    background-color: aqua;
+    border-color: brown;
+    border: 3px;
+    border-style: dashed;
 }
