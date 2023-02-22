@@ -1,21 +1,9 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const morgan = require('morgan');
-const fs = require('fs');
-const Post = require('./dbModels/post.js');
 
 const app = express();
-
-const dbInfo = fs.readFileSync('./dbinfo.json');
-const dbCredentials = JSON.parse(dbInfo);
-
-const dbURI = `mongodb+srv://${dbCredentials.username}:${dbCredentials.password}@simplepost.pmhjdyy.mongodb.net/website?retryWrites=true&w=majority`
-
-mongoose.set('strictQuery', false);
-mongoose.connect(dbURI)
-    .then((result) => app.listen(80))
-    .catch((err) => console.log(err));
-
+app.listen(80);
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(morgan('dev'));
