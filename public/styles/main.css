@@ -8,13 +8,16 @@
 }
 
 body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     background-color: #494B49;
 }
 
 nav {
     background-color: #202120;
     height: 80px;
-    
+    margin-bottom: 35px;
 }
 
 nav, nav ul {
@@ -44,17 +47,15 @@ nav ul li {
 }
 
 footer {
-    position: absolute;
-    left: 0;
-    right: 0;
+    margin-top: auto;
     background-color: #202120;
     color: white;
-    display: grid;
-    align-self: flex-end;
+    display: flex;
+    bottom: end;
     justify-content: center;
-    align-items: end;
     padding: 15px;
 }
+
 
 /* posts */
 
