@@ -18,6 +18,7 @@ mongoose.connect(dbURI)
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
+app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev'));
 
 app.get('/', (req, res) => {
@@ -31,6 +32,13 @@ app.get('/posts', (req, res) => {
 app.get('/posts/create', (req, res) => {
     res.render('posts/create', { title: 'Create Post'});
 });
+
+app.post('/posts', (req, res) => {
+    const post = new Post(req.body);
+    post.save()
+        .then(() => res.redirect('/posts'))
+        .catch((err) => console.log(err));
+})
 
 app.use('/', (req, res) => {
     res.render('404', { title: 404 });

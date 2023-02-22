@@ -3,7 +3,19 @@
     <%- include('../head.ejs') %>
     <body>
         <%- include('../nav.ejs') %>
-        <h1>Create</h1>
+        <div class="blog-create-container">
+            <form method="POST" action="/posts">
+                <label for="title">Title</label></br>
+                <input type="text" name="title" id="title" required></br>
+
+                <label for="tag">Tag</label></br>
+                <input type="text" name="tag" id="rag" required></br>
+
+                <label for="content">Content</label></br>
+                <textarea name="content" id="content" required></textarea></br>
+                <button>Post</button>
+            </form>
+        </div>
         <%- include('../footer.ejs') %>
     </body>
 </html>
