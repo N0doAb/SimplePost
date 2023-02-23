@@ -1,0 +1,51 @@
+
+.blog-create-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.blog-create-content {
+    border-radius: 30px;
+    background-color: #383938;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    height: 600px;
+}
+
+.blog-create-content form label {
+    color:white;
+    font-size: 22px;
+}
+
+.blog-create-content form input, textarea {
+    width: 300px;
+    height: 30px;
+    border-radius: 10px;
+    background-color:  #383938;
+    color: rgb(255, 255, 255);
+    resize: none;
+    padding: 6px;
+    border-color: rgb(6, 92, 49);
+    border-width: 4px;
+}
+
+.blog-create-container form textarea {
+    height: 50px;
+}
+
+.blog-create-content form input:hover, textarea:hover {
+    border-color: rgb(255, 255, 255);
+}
+
+.blog-create-content button {
+    background-color: rgb(6, 92, 49);
+    border: transparent;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 20px;
+    display: flex;
+    
+}

@@ -4,17 +4,21 @@
     <body>
         <%- include('../nav.ejs') %>
         <div class="blog-create-container">
-            <form method="POST" action="/posts">
-                <label for="title">Title</label></br>
-                <input type="text" name="title" id="title" required></br>
-
-                <label for="tag">Tag</label></br>
-                <input type="text" name="tag" id="rag" required></br>
-
-                <label for="content">Content</label></br>
-                <textarea name="content" id="content" required></textarea></br>
-                <button>Post</button>
-            </form>
+            <div class="blog-create-content">
+                <form method="POST" action="/posts">
+                    <label for="title">Title</label></br>
+                    <input type="text" name="title" id="title" required></br>
+    
+                    <label for="tag">Tag</label></br>
+                    <input type="text" name="tag" id="rag" required></br>
+    
+                    <label for="content">Content</label></br>
+                    <textarea name="content" id="content" required></textarea></br>
+                    <div>
+                        <button>Post</button>
+                    </div>
+                </form>
+            </div>
         </div>
         <%- include('../footer.ejs') %>
     </body>

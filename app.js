@@ -26,7 +26,9 @@ app.get('/', (req, res) => {
 });
 
 app.get('/posts', (req, res) => {
-    res.render('posts/index', { title: 'Posts'});
+    Post.find().sort({ createdAt: -1 })
+        .then((posts) => res.render('posts/index', { title: 'Posts', posts}))
+        .catch((err) => console.log(err));
 });
 
 app.get('/posts/create', (req, res) => {

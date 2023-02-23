@@ -56,7 +56,6 @@ footer {
     padding: 15px;
 }
 
-
 /* posts */
 
 .posts-container {
@@ -80,9 +79,8 @@ footer {
     border-radius: 100px;
 }
 
-.without-image-single-post {
+.post {
     display: grid;
-    grid-template-columns: fit-content;
     row-gap: 8px;
     margin: 9px;
 }
@@ -100,7 +98,7 @@ footer {
 }
 
 .post-content {
-    margin-top: 22px;
-    height: 200px;
+    margin-top: 16px;
+    height: 210px;
     background-color: rgb(255, 255, 255);
 }
