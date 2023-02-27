@@ -68,7 +68,7 @@ footer {
     padding: 15px;
 }
 
-.three-dots {
+.post-settings {
     border: transparent;
     background-color: transparent;
     cursor: pointer;
@@ -78,7 +78,7 @@ footer {
     margin-left:780px;
 }
 
-.three-dots:after {
+.post-settings:after {
     content: '\2807';
     font-size: 40px;
 }

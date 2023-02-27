@@ -35,6 +35,12 @@ app.get('/posts/create', (req, res) => {
     res.render('posts/create', { title: 'Create Post'});
 });
 
+app.delete('/posts/:id', (req, res) => {
+    Post.findByIdAndDelete(req.params.id)
+        .then(() => {})
+        .catch((err) => console.log(err));
+})
+
 app.post('/posts', (req, res) => {
     const post = new Post(req.body);
     post.save()
