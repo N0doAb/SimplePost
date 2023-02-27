@@ -44,8 +44,17 @@ nav ul li {
 .login-btn {
     background-color: white;
     color: black;
-    padding: 5px 12px;
+    padding: 4px 12px;
     border-radius: 30px;
+    transition: scale 0.2 ease;
+}
+
+.login-btn:hover {
+    scale: 1.035;
+}
+
+.login-btn:active {
+    scale: 0.95;
 }
 
 footer {
@@ -56,6 +65,21 @@ footer {
     bottom: end;
     justify-content: center;
     padding: 15px;
+}
+
+.three-dots {
+    border: transparent;
+    background-color: transparent;
+    cursor: pointer;
+    margin-top: 2px;
+    color: rgb(255, 255, 255);
+    display: flex;
+    margin-left:780px;
+}
+
+.three-dots:after {
+    content: '\2807';
+    font-size: 40px;
 }
 
 /* posts */
