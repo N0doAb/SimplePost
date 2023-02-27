@@ -1,35 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
+    
     <%- include('../head.ejs') %>
     <body>
+       
         <%- include('../nav.ejs') %>
     
         <div class="posts-container">
 
             <% if (posts.length > 0) {
                 posts.forEach( post => { %>
-                   
+                    
                     <div class="single-post-container">
-                        <a class="single-post">
-                            <image src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"></image>
-                            <div class="post">
-                                <h3 class="post-name"><%= post.title %></h3>
-                                <p class="post-tag"><%= post.tag %></p>
-                                <p class="post-content"><%= post.content %></p>
+                        <div class="single-post-footer">
+                            <div class="user">
+                                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"/>
+                                <div class="user-info">
+                                  <h5>Name</h5>
+                                  <small>2h ago</small>
+                                </div>
                             </div>
-                        </a>
+                        </div>
+                        <div class="single-post-header">
+                            <img src="https://c0.wallpaperflare.com/preview/483/210/436/car-green-4x4-jeep.jpg"/>
+                            <a class="single-post">
+                                <div class="post">
+                                    <p class="post-tag"><%= post.tag %></p>
+                                    <h3 class="post-name"><%= post.title %></h3>
+                                    <p class="post-content"><%= post.content %></p>
+                                </div>
+                            </a>
+                        </div>
                     </div>
 
                 <% })
             } %>
 
+            <div class="single-post-container">
+                <div class="single-post-footer">
+                            <div class="user">
+                                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"/>
+                                <div class="user-info">
+                                  <h5>Name</h5>
+                                  <small>2h ago</small>
+                                </div>
+                            </div>
+                        </div>
+                <div class="single-post-header">
+                    <img src="https://c0.wallpaperflare.com/preview/483/210/436/car-green-4x4-jeep.jpg"/>
+                    <a class="single-post">
+                        <div class="post">
+                            <p class="post-tag">AAA</p>
+                            <h3 class="post-name">AAA</h3>
+                            <p class="post-content">AAA</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+                <div class="single-post-container">
+                    <div class="single-post-footer">
+                            <div class="user">
+                                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"/>
+                                <div class="user-info">
+                                  <h5>Name</h5>
+                                  <small>2h ago</small>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="single-post-header">
+                        <img src="https://media.discordapp.net/attachments/793164062695489586/1079718359454724096/372347-4k-wallpaper.jpg?width=503&height=671"/>
+                        <a class="single-post">
+                            <div class="post">
+                                <p class="post-tag">AAA</p>
+                                <h3 class="post-name">AAA</h3>
+                                <p class="post-content">AAA</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="single-post-container">
+                    <div class="single-post-footer">
+                            <div class="user">
+                                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"/>
+                                <div class="user-info">
+                                  <h5>Name</h5>
+                                  <small>2h ago</small>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="single-post-header">
+                        <img src="https://images-ext-1.discordapp.net/external/WP-zFE3y5-7eTsGvXCiLHYKTtl-Rti3ydEv2smMD-ls/https/w0.peakpx.com/wallpaper/401/72/HD-wallpaper-in-the-jungle-rocks-nature-green.jpg"/>
+                        <a class="single-post">
+                            <div class="post">
+                                <p class="post-tag">AAA</p>
+                                <h3 class="post-name">AAA</h3>
+                                <p class="post-content">AAA</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="single-post-container">
+                    <div class="single-post-footer">
+                            <div class="user">
+                                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"/>
+                                <div class="user-info">
+                                  <h5>Name</h5>
+                                  <small>2h ago</small>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="single-post-header">
+                        <img src="https://media.discordapp.net/attachments/793164062695489586/1079712365534249040/34A6B210E60F4074B56B9A2F61D2328F.png?width=377&height=670"/>
+                        <a class="single-post">
+                            <div class="post">
+                                <p class="post-tag">AAA</p>
+                                <h3 class="post-name">AAA</h3>
+                                <p class="post-content">AAA</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
         </div>
 
         <%- include('../footer.ejs') %>
     </body>
-    <!-- <script>
-        setTimeout(function(){
-            window.location.reload();
-        }, 2000);
-    </script> -->
 </html>
