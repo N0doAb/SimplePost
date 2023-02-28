@@ -37,7 +37,7 @@ app.get('/posts/create', (req, res) => {
 
 app.delete('/posts/:id', (req, res) => {
     Post.findByIdAndDelete(req.params.id)
-        .then(() => {})
+        .then((result) => res.json({ redirect: '/posts' }))
         .catch((err) => console.log(err));
 })
 

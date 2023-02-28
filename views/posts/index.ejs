@@ -132,7 +132,8 @@
             postDeleteBtn.addEventListener('click', (e) => {
                 const endpoint = `/posts/${postDeleteBtn.dataset.post}`
                 fetch(endpoint, { method: 'DELETE' })
-                    .then(() => location.reload())
+                    .then((response) => response.json())
+                        .then((data) => window.location.href = data.redirect)
                     .catch((err) => console.log(err));
             });
         </script>

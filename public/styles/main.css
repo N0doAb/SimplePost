@@ -92,11 +92,11 @@ nav ul li {
     pointer-events: painted;  
 }
 
-.btn-search:focus {
+.btn-search:hover {
     color: rgba(255,255,255,.5);
 }
 
-.btn-search:focus ~ .input-search{
+.btn-search:hover ~ .input-search{
     width: 200px;
     border-radius: 0px;
     background-color: transparent;
@@ -104,7 +104,7 @@ nav ul li {
     transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
 }
 
-.input-search:focus{
+.input-search:hover{
     width: 200px;
     border-radius: 0px;
     background-color: transparent;
