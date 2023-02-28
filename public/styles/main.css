@@ -141,6 +141,7 @@ nav ul li {
     padding: 4px 12px;
     border-radius: 30px;
     transition: scale 0.2 ease;
+    transition-duration: 0.15s; 
 }
 
 .login-btn:hover {
@@ -161,7 +162,7 @@ footer {
     padding: 15px;
 }
 
-.three-dots {
+.post-settings {
     border: transparent;
     background-color: transparent;
     cursor: pointer;
@@ -171,7 +172,7 @@ footer {
     margin-left:780px;
 }
 
-.three-dots:after {
+.post-settings:after {
     content: '\2807';
     font-size: 40px;
 }

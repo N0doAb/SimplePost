@@ -19,9 +19,8 @@
                                   <h5>Name</h5>
                                   <small>2h ago</small>
                                 </div>
-                                <a href="/"><button class="three-dots"></button></a>
-                    </div>
-                        
+                                <a class="post-settings" id="postDeleteBtn" data-post="<%= post._id %>"></a>
+                            </div>
                         </div>
                         <div class="single-post-footer">
                             <img src="https://c0.wallpaperflare.com/preview/483/210/436/car-green-4x4-jeep.jpg"/>
@@ -37,7 +36,7 @@
 
                 <% })
             } %>
-
+            <p>-------------------- Hardcoded Posts --------------------</p>
             <div class="single-post-container">
                 <div class="single-post-footer">
                             <div class="user">
@@ -126,5 +125,16 @@
         </div>
 
         <%- include('../footer.ejs') %>
+
+        <script>
+            const postDeleteBtn = document.querySelector('#postDeleteBtn');
+
+            postDeleteBtn.addEventListener('click', (e) => {
+                const endpoint = `/posts/${postDeleteBtn.dataset.post}`
+                fetch(endpoint, { method: 'DELETE' })
+                    .then(() => location.reload())
+                    .catch((err) => console.log(err));
+            });
+        </script>
     </body>
 </html>
