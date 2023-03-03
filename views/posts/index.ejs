@@ -11,7 +11,7 @@
             <% if (posts.length > 0) {
                 posts.forEach( post => { %>
                     
-                    <div class="single-post-container">
+                    <div class="single-post-container" data-post="<%= post._id %>">
                         <div class="single-post-header">
                             <div class="user">
                                 <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"/>
@@ -19,7 +19,7 @@
                                   <h5>Name</h5>
                                   <small>2h ago</small>
                                 </div>
-                                <a class="post-settings" id="postDeleteBtn" data-post="<%= post._id %>"></a>
+                                <a class="post-settings"></a>
                             </div>
                         </div>
                         <div class="single-post-footer">
@@ -36,7 +36,9 @@
 
                 <% })
             } %>
-            <p>-------------------- Hardcoded Posts --------------------</p>
+
+            <p>-------------------------------------------------------------------- Hardcode --------------------------------------------------------------------</p>
+            
             <div class="single-post-container">
                 <div class="single-post-footer">
                             <div class="user">
@@ -127,15 +129,17 @@
         <%- include('../footer.ejs') %>
 
         <script>
-            const postDeleteBtn = document.querySelector('#postDeleteBtn');
+            const postDeleteBtn = document.querySelectorAll('.post-settings');
 
-            postDeleteBtn.addEventListener('click', (e) => {
-                const endpoint = `/posts/${postDeleteBtn.dataset.post}`
+            postDeleteBtn.forEach((post) => {
+                post.addEventListener('click', (e) => {
+                const endpoint = `/posts/${e.target.parentElement.parentElement.parentElement.dataset.post}`
                 fetch(endpoint, { method: 'DELETE' })
                     .then((response) => response.json())
                         .then((data) => window.location.href = data.redirect)
                     .catch((err) => console.log(err));
-            });
+                });
+            })
         </script>
     </body>
 </html>
