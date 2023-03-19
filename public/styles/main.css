@@ -162,7 +162,7 @@ footer {
     padding: 15px;
 }
 
-.post-settings {
+.post-settings-btn {
     border: transparent;
     background-color: transparent;
     cursor: pointer;
@@ -172,7 +172,7 @@ footer {
     margin-left:780px;
 }
 
-.post-settings:after {
+.post-settings-btn:after {
     content: '\2807';
     font-size: 40px;
 }

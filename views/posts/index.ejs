@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
     
-    <%- include('../head.ejs') %>
+    <%- include('../partials/head.ejs') %>
     <body>
        
-        <%- include('../nav.ejs') %>
+        <%- include('../partials/nav.ejs') %>
     
         <div class="posts-container">
 
@@ -19,7 +19,7 @@
                                   <h5>Name</h5>
                                   <small>2h ago</small>
                                 </div>
-                                <a class="post-settings"></a>
+                                <a class="post-settings-btn"></a>
                             </div>
                         </div>
                         <div class="single-post-footer">
@@ -126,13 +126,13 @@
 
         </div>
 
-        <%- include('../footer.ejs') %>
+        <%- include('../partials/footer.ejs') %>
 
         <script>
-            const postDeleteBtn = document.querySelectorAll('.post-settings');
+            const postDeleteBtns = document.querySelectorAll('.post-settings-btn');
 
-            postDeleteBtn.forEach((post) => {
-                post.addEventListener('click', (e) => {
+            postDeleteBtns.forEach((btn) => {
+                btn.addEventListener('click', (e) => {
                 const endpoint = `/posts/${e.target.parentElement.parentElement.parentElement.dataset.post}`
                 fetch(endpoint, { method: 'DELETE' })
                     .then((response) => response.json())
